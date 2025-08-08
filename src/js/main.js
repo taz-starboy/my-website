@@ -7,7 +7,6 @@ $(document).ready(function () {
     initializeSwiperIfPresent();
 });
 
-
 function initializeSwiperIfPresent() {
     if ($(".swiper").length) {
         new Swiper(".swiper", {
@@ -16,7 +15,7 @@ function initializeSwiperIfPresent() {
             centeredSlides: true,
             grabCursor: true,
             spaceBetween: 20,
-            freeMode: true,
+            freeMode: false,
             pagination: {
                 el: ".pagination",
                 clickable: true,
@@ -26,6 +25,7 @@ function initializeSwiperIfPresent() {
             breakpoints: {
                 768: {
                     centeredSlides: false,
+                    freeMode: true,
                     slidesOffsetBefore: 20,
                     slidesOffsetAfter: 20
                 }
