@@ -27,7 +27,7 @@ jobs:
         run: npm install -g esbuild sass
 
       - name: Build SCSS
-        run: sass src/scss/ dist/css/style.css --no-source-map
+        run: sass src/scss/style.scss dist/css/style.css --no-source-map
 
       - name: Build JS
         run: esbuild src/js/main.js --bundle --outfile=dist/js/main.min.js --minify
