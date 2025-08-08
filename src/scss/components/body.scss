@@ -1,7 +1,7 @@
 @use '../variables';
 
 body {
-    font-family: variables.$font-family;
+    font-family: Geneva, Verdana, sans-serif;
     color: variables.$night;
     letter-spacing: variables.$letter-spacing;
     box-sizing: border-box;
@@ -89,6 +89,17 @@ body {
                 &:hover {
                     background-color: white;
                     color: variables.$night;
+                }
+            }
+            &.tertiary {
+                border: 2px solid variables.$gold;
+                background-color: variables.$gold;
+                color: variables.$night;
+
+                &:hover {
+                    background-color: white;
+                    color: variables.$night;
+                    border: 2px solid variables.$night;
                 }
             }
         }
