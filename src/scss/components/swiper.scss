@@ -1,0 +1,52 @@
+@use '../variables';
+
+.swiper {
+    width: 100%;
+
+    .swiper-wrapper {
+        padding: 20px 0px;
+
+        .swiper-slide {
+            width: 230px;
+            padding: 20px;
+            height: auto;
+
+            .experience-wrapper {
+                .date {
+                    font-weight: 600;
+                }
+                .role {
+                    text-transform: uppercase;
+                }
+                .company,
+                .location {
+                    margin: 0px;
+                }
+                .description {
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+    .pagination {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        .bullet {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: variables.$night;
+            opacity: .2;
+            cursor: pointer;
+
+            &.active {
+                width: 18px;
+                opacity: 1;
+            }
+        }
+
+    }
+}

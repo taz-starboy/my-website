@@ -1,0 +1,23 @@
+@use '../variables';
+
+footer {
+    width: 100%;
+
+    nav {
+        @media screen and (max-width: variables.$max-mobile-width) {
+            flex-direction: column-reverse;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+
+            @media screen and (max-width: variables.$max-mobile-width) {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+}

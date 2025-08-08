@@ -1,0 +1,24 @@
+.social_box {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 40px;
+
+    a {
+        img {
+            height: 24px;
+            width: 24px;
+        }
+    }
+
+    &.small {
+        padding: 0px;
+
+        a {
+            img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+}
