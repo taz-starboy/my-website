@@ -1,0 +1,26 @@
+@use '../variables';
+
+.projects_wrapper {
+    padding: 20px;
+
+    .project {
+        border-radius: 25px;
+
+        .title_and_link {
+            display: flex;
+            gap: 20px;
+        }
+        .description {}
+        .technologies {
+            display: flex;
+            gap: 20px;
+
+            .technology {
+                background-color: variables.$gold;
+                border: 2px solid variables.$gold;
+                border-radius: 45px;
+                padding: 5px 10px;
+            }
+        }
+    }
+}
