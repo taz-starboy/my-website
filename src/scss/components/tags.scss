@@ -1,0 +1,18 @@
+@use '../variables';
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+
+    .tag {
+        background-color: rgba(94, 234, 212, 0.1); // Verde trasparente
+        color: variables.$accent-color;
+        padding: 5px 12px;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1;
+    }
+}

@@ -1,0 +1,32 @@
+@use '../variables';
+
+.card {
+    display: flex;
+    margin-bottom: 40px;
+    padding: 20px;
+    transition: background 0.3s;
+    border-radius: 5px;
+
+    &:hover { 
+        background: rgba(255, 255, 255, 0.05); 
+    }
+
+    @media (max-width: variables.$max-mobile-width) {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .date {
+        width: 480px;
+    }
+
+    .details {
+        .details-title {
+            color: rgb(226 232 240);
+            font-weight: 500;
+        }
+        .details-content {
+            font-size: .875rem;
+        }
+    }
+}

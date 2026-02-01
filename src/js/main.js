@@ -1,42 +1,34 @@
-/*
-import './header.js';
-import './footer.js';
-import './card.js';
-*/
-$(document).ready(function () {
-    initializeSwiperIfPresent();
-});
+$(document).ready(function() {
+    $(window).on('scroll', function() {
+        let scrollPos = $(window).scrollTop();
+        
+        $('.section').each(function() {
+            let top = $(this).offset().top - 150;
+            let bottom = top + $(this).outerHeight();
+            let id = $(this).attr('id');
 
-function initializeSwiperIfPresent() {
-    if ($(".swiper").length) {
-        new Swiper(".swiper", {
-            swiperElementNodeName: 'SWIPER-CONTAINER',
-            slidesPerView: "auto",
-            centeredSlides: true,
-            grabCursor: true,
-            spaceBetween: 20,
-            freeMode: false,
-            pagination: {
-                el: ".pagination",
-                clickable: true,
-                bulletClass: 'bullet',
-                bulletActiveClass: 'active'
-            },
-            breakpoints: {
-                768: {
-                    centeredSlides: false,
-                    freeMode: true,
-                    slidesOffsetBefore: 20,
-                    slidesOffsetAfter: 20
-                }
+            if (scrollPos >= top && scrollPos <= bottom) {
+                $('.nav-menu a').removeClass('active');
+                $('.nav-menu a[href="#' + id + '"]').addClass('active');
             }
         });
-        console.log("Swiper initialized.");
+    });
+});
+
+$(document).ready(function() {
+    // Aggiungiamo lo spotlight al body se non presente nell'HTML
+    if ($('.spotlight').length === 0) {
+        $('body').append('<div class="spotlight"></div>');
     }
-}
 
-
-
+    $(window).on('mousemove', function(e) {
+        // Aggiorniamo le variabili CSS direttamente sull'elemento spotlight
+        $('.spotlight').css({
+            '--x': e.clientX + 'px',
+            '--y': e.clientY + 'px'
+        });
+    });
+});
 
 
 

@@ -1,0 +1,18 @@
+@use '../variables';
+
+.spotlight {    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; // Fondamentale per cliccare i bottoni sotto!
+    z-index: 9999;
+    // Usiamo le variabili passate dal JS per posizionare il centro del cerchio
+    background: radial-gradient(
+        600px circle at var(--x, 0px) var(--y, 0px), 
+        rgba(29, 78, 216, 0.15), 
+        transparent 80%
+    );
+    transition: background 0.05s ease; // Opzionale: rende il movimento più fluido
+}

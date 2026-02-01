@@ -1,9 +1,152 @@
 @use 'variables';
-@use 'components/body';
-@use 'components/header';
-@use 'components/social_box';
-@use 'components/home_page_content';
-@use 'components/footer';
-@use 'components/action';
-@use 'components/swiper';
-@use 'components/projects';
+@use 'components/card';
+@use 'components/spotlight';
+@use 'components/tags';
+@use 'components/social-links';
+
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    background-color: variables.$bg-color;
+    color: variables.$text-secondary;
+    font-family: variables.$font-family;
+    line-height: 1.6;
+
+    .main-container {
+        display: flex;
+        max-width: variables.$main-container-max-width;
+        margin: 0 auto;
+        //padding: 0 50px;
+        justify-content: space-between;
+
+        @media (max-width: variables.$max-mobile-width) {
+            flex-direction: column;
+            padding: 0 20px;
+        }
+
+
+        .sidebar {
+            position: sticky;
+            top: 0;
+            width: 35%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 100px 0;
+
+            @media (max-width: variables.$max-mobile-width) {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 50px 0;
+            }
+        
+            h1 { 
+                color: variables.$text-primary; 
+                font-size: 3rem; 
+            }
+            h2 { 
+                color: variables.$text-primary; 
+                margin-bottom: 1rem; 
+            }
+        
+            .nav-menu {
+                margin-top: 50px;
+
+                ul { 
+                    list-style: none; 
+                }
+
+                li a {
+                    text-decoration: none;
+                    color: variables.$text-secondary;
+                    display: flex;
+                    align-items: center;
+                    //font-size: 0.8rem;
+                    letter-spacing: 0.1rem;
+                    margin-bottom: 1.5rem;
+                
+                    span {
+                        width: 30px;
+                        height: 1px;
+                        background: variables.$text-secondary;
+                        margin-right: 15px;
+                        transition: width 0.3s;
+                    }
+                
+                    &.active, 
+                    &:hover {
+                        color: variables.$text-primary;
+
+                        span { 
+                            width: 60px; 
+                            background: variables.$text-primary; 
+                        }
+                    }
+                }
+            }
+        }
+
+        .content {
+            width: 50%;
+            padding: 100px 0;
+
+            @media (max-width: variables.$max-mobile-width) {
+                width: 100%;
+                padding: 0;
+            }
+
+            .section {
+                margin-bottom: 120px;
+                scroll-margin-top: 100px;
+            }
+        }
+
+
+    }
+
+}
+
+
+.about-text-content {
+    padding: 20px;
+}
+
+
+.label-text {
+    color: rgb(100 116 139);
+    letter-spacing: .025em;
+    text-transform: uppercase;    
+    font-weight: 600;    
+    font-size: .75rem;
+}
+
+
+
+
+
+
+
+// Il bottone del Resume
+.btn-resume {
+    display: inline-block;
+    padding: 10px 20px;
+    color: variables.$accent-color;
+    border: 1px solid variables.$accent-color;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: rgba(94, 234, 212, 0.1);
+        box-shadow: 0 0 15px rgba(94, 234, 212, 0.2);
+    }
+}

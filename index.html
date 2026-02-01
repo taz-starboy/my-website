@@ -1,102 +1,187 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-    <meta charset="UTF-8" />
-    <title>My Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos Bendezu</title>
     <link rel="stylesheet" href="dist/css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="dist/js/main.min.js"></script>
 </head>
+
 <body>
-<header>
-    <nav>
-        <div class="header-left_wrapper">
-            <div class="header-left_title-wrapper">
-                <div class="cube"></div>
-                <p>Marcos Bendezu</p>
+
+    <div class="main-container">
+
+
+        <header class="sidebar">
+            <div class="top-content">
+                <h1>Marcos Bendezu</h1>
+                <h2>Software Engineer</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#about" class="active label-text"><span></span> ABOUT</a></li>
+                        <li><a href="#experience" class="label-text"><span></span> EXPERIENCE</a></li>
+                        <li><a href="#projects" class="label-text"><span></span> PROJECTS</a></li>
+                    </ul>
+                </nav>
             </div>
-            <p class="role">SOFTWARE DEVELOPER</p>
-        </div>
-        <div class="header-right_wrapper">
-            <a class="disabled" href="">Home</a>
-            <a href="html/resume.html">Curriculum</a>
-            <a class="" href="html/projects.html">Progetti</a>
-        </div>
-    </nav>
-</header>
 
-<main id="content">
-    <div class="home_page_content">
+            <ul class="social-links">
+                <li class="social-links_li">
+                    <a class="social-links_li_a" href="https://github.com/taz-starboy" target="_blank" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="social-links_svg"
+                            aria-hidden="true">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-links_li">
+                    <a class="social-links_li_a" href="https://www.linkedin.com/in/marcos-bendezu-java-developer/"
+                        target="_blank" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="social-links_svg">
+                            <path
+                                d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </header>
 
-        <div class="business card">
-            <div class="business_card">
-                <div class="picture" style="background-image: url('./resources/profile-picture_marcos-bendezu.jpeg')"></div>
-                <div class="name-role-wrapper">
-                    <h1 class="name">Marcos Bendezu</h1>
-                    <p class="role">SOFTWARE DEVELOPER</p>
+        <main class="content">
+
+            <section id="about" class="section">
+                <div class="about-text-content">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam efficitur aliquet sem vel feugiat. 
+                        Vestibulum nec sodales quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+                        In a lacus dolor. Nulla urna augue, ultrices convallis porta sit amet, porttitor ac mi. 
+                        <br><br>
+                        Sed consequat lectus turpis, et aliquam urna volutpat sit amet. <b style="color: white;">Donec eleifend</b> maximus cursus. 
+                        In non velit egestas, vehicula orci non, imperdiet neque. 
+                        Vestibulum tincidunt orci vel sapien sollicitudin, at sagittis mi auctor.
+                        <br><br>
+                        Ut finibus dolor ac tempor malesuada. Vivamus dapibus efficitur eros, quis dignissim turpis vulputate a. 
+                        Praesent ultrices neque libero, vitae pretium lorem laoreet ac. Suspendisse eu maximus nunc, in mollis magna.
+                    </p>
                 </div>
-                <div class="links">
-                    <a class="button" href="html/resume.html">Curriculum</a>
-                    <a class="button secondary" href="">Progetti</a>
-                </div>
-            </div>
-            <div class="social_box">
-                <a href="https://github.com/taz-starboy">
-                    <img src="resources/icons/github-logo.svg" alt="logo-github"/>
-                </a>
-                <a href="https://www.linkedin.com/in/marcos-bendezu-java-developer/">
-                    <img src="resources/icons/linkedin-logo.svg" alt="logo-linkedin"/>
-                </a>
-            </div>
-        </div>
+            </section>
 
-        <div class="side_wrapper">
-            <p class="side-title">Chi sono, cosa faccio?</p>
-            <div class="side-links">
-                <a class="button" href="html/resume.html">Curriculum</a>
-                <a class="button secondary" href="./html/projects.html">Progetti</a>
-            </div>
-            <p class="side-paragraph">
-                <b>Ho competenze su Java, Spring, JavaScript/jQuery, SQL e AEM.</b><br><br>
-                Mi occupo di sviluppo backend, integrazione frontend e gestione flussi dati.<br>
-                Collaboro con team cross-funzionali e garantisco qualità, modularità e rispetto delle tempistiche.<br>
-                Sono orientato alla crescita continua e all’approfondimento di architetture scalabili e moderne.<br>
-            </p>
-        </div>
+
+            <section id="experience" class="section">
+                <div class="card">
+                    <span class="date label-text">2025 — Presente</span>
+                    <div class="details">
+                        <p class="details-title">Senior Engineer · Mondo Convenienza</p>
+                        <p class="details-content">
+                            Ruolo full-stack web con responsabilità nella progettazione e sviluppo di componenti
+                            frontend (HTML, JavaScript/jQuery) e backend (Java), oltre a configurazioni OSGi per la
+                            modularità dell’applicazione.
+                        </p>
+                        <div class="tag-container">
+                            <span class="tag">C#</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">React</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="date label-text">2022 — 2025</span>
+                    <div class="details">
+                        <p class="details-title">Full Stack Developer · Capgemini</p>
+                        <p class="details-content">
+                            Ruolo full-stack web con responsabilità nella progettazione e sviluppo di componenti
+                            frontend (HTML, JavaScript/jQuery) e backend (Java), oltre a configurazioni OSGi per la
+                            modularità dell’applicazione.
+                        </p>
+                        <div class="tag-container">
+                            <span class="tag">Java</span>
+                            <span class="tag">HTL</span>
+                            <span class="tag">AEM</span>
+                            <span class="tag">OSGi Model</span>
+                            <span class="tag">Javascript</span>
+                            <span class="tag">SCSS</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="projects" class="section">
+                <div class="card">
+                    <div class="project-img"></div>
+                    <div class="details">
+                        <p class="details-title">Progetto Figo</p>
+                        <p class="details-content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="project-img"></div>
+                    <div class="details">
+                        <p class="details-title">Progetto Figo</p>
+                        <p class="details-content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="project-img"></div>
+                    <div class="details">
+                        <p class="details-title">Progetto Figo</p>
+                        <p class="details-content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="project-img"></div>
+                    <div class="details">
+                        <p class="details-title">Progetto Figo</p>
+                        <p class="details-content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="project-img"></div>
+                    <div class="details">
+                        <p class="details-title">Progetto Figo</p>
+                        <p class="details-content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="project-img"></div>
+                    <div class="details">
+                        <p class="details-title">Progetto Figo</p>
+                        <p class="details-content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="project-img"></div>
+                    <div class="details">
+                        <p class="details-title">Progetto Figo</p>
+                        <p class="details-content">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
 
     </div>
-</main>
-
-<footer>
-    <nav>
-        <p>&copy; 2035 by Marcos Bendezu</p>
-        <div class="actions">
-            <div class="action">
-                <p>Chiamami</p>
-                <a class="" href="tel:+393342735888">+393342735888</a>
-            </div>
-            <div class="action">
-                <p>Scrivimi</p>
-                <a class="" href="mailto:taz23@hotmail.it">taz23@hotmail.it</a>
-            </div>
-            <div class="action">
-                <p>Seguimi</p>
-                <div class="social_box small">
-                    <a href="https://github.com/taz-starboy">
-                        <img src="resources/icons/github-logo.svg" alt="logo-github"/>
-                    </a>
-                    <a href="https://www.linkedin.com/in/marcos-bendezu-java-developer/">
-                        <img src="resources/icons/linkedin-logo.svg" alt="logo-linkedin"/>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-</footer>
-
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="dist/js/main.min.js"></script>
+    
 </body>
+
 </html>
