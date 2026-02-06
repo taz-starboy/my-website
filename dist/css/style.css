@@ -1,24 +1,57 @@
+#projects .card {
+  gap: 20px;
+}
+
 .card {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   padding: 20px;
   transition: background 0.3s;
   border-radius: 5px;
 }
-.card:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
 @media (max-width: 1024px) {
   .card {
-    padding: 0;
+    padding: 20px 0px;
     flex-direction: column;
   }
 }
+.card:hover {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  background-color: rgba(30, 41, 59, 0.5);
+}
+.card:hover .details .details-title {
+  color: #5eead4;
+  transition: color 0.3s;
+}
+.card .project-img,
 .card .date {
-  width: 480px;
+  width: 30%;
+  color: rgb(100, 116, 139);
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+@media (max-width: 1024px) {
+  .card .project-img,
+  .card .date {
+    width: auto;
+  }
+}
+.card .project-img img {
+  width: 100%;
+}
+.card .details {
+  width: 70%;
+}
+@media (max-width: 1024px) {
+  .card .details {
+    width: auto;
+  }
 }
 .card .details .details-title {
-  color: rgb(226, 232, 240);
+  color: #e2e8f0;
   font-weight: 500;
 }
 .card .details .details-content {
@@ -77,6 +110,20 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #e2e8f0;
+}
+a:hover,
+a b:hover {
+  color: #5eead4;
+}
+
+b {
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
 body {
   background-color: #0f172a;
   color: #94a3b8;
@@ -113,39 +160,48 @@ body .main-container .sidebar {
     padding: 50px 0;
   }
 }
-body .main-container .sidebar h1 {
+body .main-container .sidebar .top-content h1 {
   color: #e2e8f0;
   font-size: 3rem;
 }
-body .main-container .sidebar h2 {
+body .main-container .sidebar .top-content h2 {
   color: #e2e8f0;
   margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: 1.5px;
 }
-body .main-container .sidebar .nav-menu {
+body .main-container .sidebar .top-content p {
+  max-width: 20rem;
+}
+body .main-container .sidebar .top-content .nav-menu {
   margin-top: 50px;
 }
-body .main-container .sidebar .nav-menu ul {
+body .main-container .sidebar .top-content .nav-menu ul {
   list-style: none;
 }
-body .main-container .sidebar .nav-menu li a {
+body .main-container .sidebar .top-content .nav-menu li a {
   text-decoration: none;
   color: #94a3b8;
   display: flex;
   align-items: center;
-  letter-spacing: 0.1rem;
   margin-bottom: 1.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.75rem;
 }
-body .main-container .sidebar .nav-menu li a span {
+body .main-container .sidebar .top-content .nav-menu li a span {
   width: 30px;
   height: 1px;
   background: #94a3b8;
   margin-right: 15px;
   transition: width 0.3s;
 }
-body .main-container .sidebar .nav-menu li a.active, body .main-container .sidebar .nav-menu li a:hover {
+body .main-container .sidebar .top-content .nav-menu li a.active, body .main-container .sidebar .top-content .nav-menu li a:hover {
   color: #e2e8f0;
 }
-body .main-container .sidebar .nav-menu li a.active span, body .main-container .sidebar .nav-menu li a:hover span {
+body .main-container .sidebar .top-content .nav-menu li a.active span, body .main-container .sidebar .top-content .nav-menu li a:hover span {
   width: 60px;
   background: #e2e8f0;
 }
@@ -163,31 +219,17 @@ body .main-container .content .section {
   margin-bottom: 120px;
   scroll-margin-top: 100px;
 }
-
-.about-text-content {
+body .main-container .content .section .about-text-content {
   padding: 20px;
 }
-
-.label-text {
-  color: rgb(100, 116, 139);
-  letter-spacing: 0.025em;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 0.75rem;
+@media (max-width: 1024px) {
+  body .main-container .content .section .about-text-content {
+    padding: 0px;
+  }
 }
-
-.btn-resume {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #5eead4;
-  border: 1px solid #5eead4;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  margin-top: 2rem;
+body .main-container .content #experience:hover .card,
+body .main-container .content #projects:hover .card {
+  opacity: 0.5;
+  filter: blur(1px);
   transition: all 0.3s ease;
-}
-.btn-resume:hover {
-  background-color: rgba(94, 234, 212, 0.1);
-  box-shadow: 0 0 15px rgba(94, 234, 212, 0.2);
 }
