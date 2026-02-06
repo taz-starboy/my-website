@@ -10,13 +10,21 @@
     padding: 0; 
     box-sizing: border-box;
 }
-a {
-    text-decoration: none;
-    color: variables.$text-primary;
+#projects {
+    a {
+        text-decoration: none;
+        color: unset;
+    }
+}
+.section:not(#projects) {
+    a {
+        text-decoration: none;
+        color: variables.$text-primary;
 
-    &:hover,
-    b:hover {
-        color: variables.$accent-color;
+        &:hover,
+        b:hover {
+            color: variables.$accent-color;
+        }
     }
 }
 b {

@@ -110,12 +110,17 @@
   box-sizing: border-box;
 }
 
-a {
+#projects a {
+  text-decoration: none;
+  color: unset;
+}
+
+.section:not(#projects) a {
   text-decoration: none;
   color: #e2e8f0;
 }
-a:hover,
-a b:hover {
+.section:not(#projects) a:hover,
+.section:not(#projects) a b:hover {
   color: #5eead4;
 }
 
