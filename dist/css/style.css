@@ -9,7 +9,7 @@
   transition: background 0.3s;
   border-radius: 5px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .card {
     padding: 20px 0px;
     flex-direction: column;
@@ -33,7 +33,7 @@
   font-weight: 600;
   font-size: 0.75rem;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .card .project-img,
   .card .date {
     width: auto;
@@ -45,7 +45,7 @@
 .card .details {
   width: 70%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .card .details {
     width: auto;
   }
@@ -141,7 +141,7 @@ body .main-container {
   margin: 0 auto;
   justify-content: space-between;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   body .main-container {
     flex-direction: column;
     padding: 0 20px;
@@ -157,7 +157,7 @@ body .main-container .sidebar {
   justify-content: space-between;
   padding: 100px 0;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   body .main-container .sidebar {
     position: relative;
     width: 100%;
@@ -214,7 +214,7 @@ body .main-container .content {
   width: 50%;
   padding: 100px 0;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   body .main-container .content {
     width: 100%;
     padding: 0;
@@ -227,7 +227,7 @@ body .main-container .content .section {
 body .main-container .content .section .about-text-content {
   padding: 20px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   body .main-container .content .section .about-text-content {
     padding: 0px;
   }
