@@ -1,0 +1,53 @@
+@use "./variables.scss";
+/* @use 'components/tags';
+@use 'components/social-links'; */
+
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+#projects {
+    a {
+        text-decoration: none;
+        color: unset;
+    }
+}
+.section:not(#projects) {
+    a {
+        text-decoration: none;
+        color: variables.$text-primary;
+
+        &:hover,
+        b:hover {
+            color: variables.$accent-color;
+        }
+    }
+}
+b {
+    color: variables.$text-primary;
+    font-weight: 500;
+}
+body {
+    background-color: variables.$bg-color;
+    color: variables.$text-secondary;
+    font-family: variables.$font-family;
+    line-height: 1.6;
+
+    .main-container {
+        display: flex;
+        max-width: variables.$main-container-max-width;
+        margin: 0 auto;
+        //padding: 0 50px;
+        justify-content: space-between;
+
+        @media (max-width: variables.$max-mobile-width) {
+            flex-direction: column;
+            padding: 0 20px;
+        }       
+
+
+    }
+
+}

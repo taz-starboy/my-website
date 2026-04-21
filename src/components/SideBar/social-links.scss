@@ -1,0 +1,22 @@
+@use '../variables';
+
+.social-links {
+    list-style: none;
+    display: flex;
+
+    .social-links_li {
+        margin-right: 1.25rem;
+
+        .social-links_li_a {
+            display: block;
+            text-decoration: inherit;
+
+            .social-links_svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                display: block;
+                fill: variables.$text-secondary;
+            }
+        }
+    }
+}

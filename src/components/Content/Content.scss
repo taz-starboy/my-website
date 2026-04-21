@@ -1,0 +1,35 @@
+@use "../variables.scss";
+
+.content {
+    width: 50%;
+    padding: 100px 0;
+
+    @media (max-width: variables.$max-mobile-width) {
+        width: 100%;
+        padding: 0;
+    }
+
+    .section {
+        margin-bottom: 120px;
+        scroll-margin-top: 100px;
+
+        .about-text-content {
+            padding: 20px;
+
+            @media (max-width: variables.$max-mobile-width) {
+                padding: 0px;
+            }
+        }
+    }
+
+    #experience,
+    #projects {
+        &:hover {
+            .card {
+                opacity: 0.5;
+                filter: blur(1px);
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
